@@ -77,7 +77,7 @@ body{
 
 /* ===== DANH SÁCH BÀI ===== */
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:0 auto;
   padding:20px;
   display:grid;
@@ -89,22 +89,18 @@ body{
 .card{
   position:relative;
   border-radius:22px;
-  padding:32px 20px;
+  padding:30px 20px;
   text-align:center;
   box-shadow:0 10px 20px rgba(0,0,0,0.15);
   cursor:pointer;
   transition:transform 0.2s;
 }
-.card:hover{
-  transform:scale(1.05);
-}
-.card.locked{
-  opacity:0.65;
-}
+.card:hover{ transform:scale(1.05); }
+.card.locked{ opacity:0.65; }
 
 /* ===== ICON ===== */
 .icon{
-  font-size:46px;
+  font-size:44px;
   animation:bounce 1.2s infinite alternate;
 }
 @keyframes bounce{
@@ -113,8 +109,8 @@ body{
 }
 
 .card h2{
-  margin:15px 0 0;
-  font-size:21px;
+  margin:14px 0 0;
+  font-size:18px;
   color:#0f172a;
 }
 
@@ -126,13 +122,9 @@ body{
   font-size:26px;
 }
 
-/* ===== MÀU BÀI ===== */
-.bai1{background:#e0f2fe;}
-.bai2{background:#bae6fd;}
-.bai3{background:#7dd3fc;}
-.bai4{background:#fde68a;}
-.bai5{background:#bbf7d0;}
-.bai6{background:#fde2e2;}
+/* ===== MÀU ===== */
+.hk1{ background:#e0f2fe; }
+.hk2{ background:#fde68a; }
 
 /* ===== IC3 SPARK ===== */
 .ic3{
@@ -155,7 +147,7 @@ body{
   padding:30px 25px;
   border-radius:20px;
   text-align:center;
-  max-width:320px;
+  max-width:330px;
   box-shadow:0 10px 20px rgba(0,0,0,0.25);
 }
 .popup-box h3{
@@ -179,10 +171,9 @@ body{
 
 <a class="home-btn" href="../index.html">🏠 Trang chủ</a>
 
-<!-- ===== HEADER ===== -->
 <header class="top-header">
   <h1>💻 LỚP 3 – TIN HỌC</h1>
-  <p>Khám phá tin học và chương trình quốc tế IC3 Spark</p>
+  <p>Học tư duy – Rèn kỹ năng – Làm quen IC3 Spark</p>
 
   <div class="semester-select">
     <button class="semester-btn active" onclick="showSemester(1)">📗 Học kì 1</button>
@@ -190,75 +181,58 @@ body{
   </div>
 </header>
 
-<!-- ===== MAIN ===== -->
 <main class="main-content">
 
-  <!-- ===== HỌC KÌ 1 ===== -->
-  <div class="container semester semester-1">
+<!-- ===== HỌC KÌ 1 ===== -->
+<div class="container semester semester-1">
 
-    <div class="card bai1" data-ready="true" data-link="bai1/index.html">
-      <div class="icon">🖱️</div>
-      <h2>Bài 1<br>Chuột và bàn phím</h2>
-    </div>
-
-    <div class="card bai2 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">🖥️</div>
-      <h2>Bài 2<br>Màn hình và máy tính</h2>
-    </div>
-
-    <div class="card bai3 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">📁</div>
-      <h2>Bài 3<br>Làm việc với tệp</h2>
-    </div>
-
-    <!-- IC3 SPARK HK1 -->
-    <div class="card ic3 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">🌍</div>
-      <h2>IC3 Spark<br>Kỹ năng số cơ bản</h2>
-    </div>
-
+  <div class="card hk1" data-ready="true" data-link="bai1/index.html">
+    <div class="icon">🧠</div>
+    <h2>Bài 1<br>Thông tin và quyết định</h2>
   </div>
 
-  <!-- ===== HỌC KÌ 2 ===== -->
-  <div class="container semester semester-2" style="display:none">
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">⚙️</div><h2>Bài 2<br>Xử lí thông tin</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">💻</div><h2>Bài 3<br>Máy tính – người bạn mới</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">🖱️</div><h2>Bài 4<br>Làm việc với máy tính</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">⌨️</div><h2>Bài 5<br>Tập gõ bàn phím</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">🌐</div><h2>Bài 6<br>Xem tin & giải trí Internet</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">🗂️</div><h2>Bài 7<br>Sắp xếp để dễ tìm</h2></div>
+  <div class="card hk1 locked"><div class="lock">🔒</div><div class="icon">📁</div><h2>Bài 8<br>Làm quen với thư mục</h2></div>
 
-    <div class="card bai4 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">⌨️</div>
-      <h2>Bài 4<br>Luyện gõ bàn phím</h2>
-    </div>
-
-    <div class="card bai5 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">📝</div>
-      <h2>Bài 5<br>Soạn thảo văn bản</h2>
-    </div>
-
-    <div class="card bai6 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">🎮</div>
-      <h2>Bài 6<br>Luyện tập tổng hợp</h2>
-    </div>
-
-    <!-- IC3 SPARK HK2 -->
-    <div class="card ic3 locked" data-ready="false">
-      <div class="lock">🔒</div>
-      <div class="icon">🏅</div>
-      <h2>IC3 Spark<br>Ứng dụng CNTT</h2>
-    </div>
-
+  <div class="card ic3 locked">
+    <div class="lock">🔒</div>
+    <div class="icon">🌍</div>
+    <h2>IC3 Spark<br>Kỹ năng số cơ bản</h2>
   </div>
+
+</div>
+
+<!-- ===== HỌC KÌ 2 ===== -->
+<div class="container semester semester-2" style="display:none">
+
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">🔐</div><h2>Bài 9<br>Bảo vệ thông tin gia đình</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">📊</div><h2>Bài 10<br>Trang trình chiếu của em</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">🌞</div><h2>Bài 11A<br>Hệ Mặt Trời</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">📋</div><h2>Bài 12<br>Công việc theo các bước</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">🧩</div><h2>Bài 13<br>Chia việc lớn thành nhỏ</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">🔁</div><h2>Bài 14<br>Thực hiện theo điều kiện</h2></div>
+  <div class="card hk2 locked"><div class="lock">🔒</div><div class="icon">🤝</div><h2>Bài 15<br>Nhiệm vụ & trợ giúp CNTT</h2></div>
+
+  <div class="card ic3 locked">
+    <div class="lock">🔒</div>
+    <div class="icon">🏅</div>
+    <h2>IC3 Spark<br>Ứng dụng CNTT</h2>
+  </div>
+
+</div>
 
 </main>
 
 <!-- ===== POPUP ===== -->
 <div id="popup">
   <div class="popup-box">
-    <h3>🔒 Chưa mở bài học</h3>
-    <p>Bài này thầy/cô đang chuẩn bị.<br>Con quay lại sau nhé 😊</p>
+    <h3>🔒 Bài học chưa mở</h3>
+    <p>Con học lần lượt nhé!<br>Thầy/cô sẽ mở sau 😊</p>
     <button onclick="closePopup()">OK</button>
   </div>
 </div>
@@ -267,14 +241,12 @@ body{
 const clickSound = new Audio("sound/click.mp3");
 
 document.querySelectorAll(".card").forEach(card=>{
-  card.addEventListener("click", function(){
+  card.addEventListener("click", ()=>{
     clickSound.currentTime = 0;
     clickSound.play();
 
-    if(this.dataset.ready === "true"){
-      setTimeout(()=>{
-        window.location.href = this.dataset.link;
-      },150);
+    if(card.dataset.ready === "true"){
+      setTimeout(()=>window.location.href = card.dataset.link,150);
     }else{
       setTimeout(showPopup,150);
     }
@@ -288,7 +260,6 @@ function closePopup(){
   document.getElementById("popup").style.display="none";
 }
 
-/* CHUYỂN HỌC KÌ */
 function showSemester(semester){
   document.querySelectorAll(".semester").forEach(s=>s.style.display="none");
   document.querySelector(".semester-"+semester).style.display="grid";
@@ -300,4 +271,3 @@ function showSemester(semester){
 
 </body>
 </html>
-
