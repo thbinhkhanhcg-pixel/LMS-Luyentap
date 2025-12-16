@@ -2,256 +2,168 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Lớp 5 - Tin học</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lớp 5 – Tin học & Công nghệ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#f8fafc;
-}
-
-/* ===== NÚT TRANG CHỦ ===== */
-.home-btn{
-  position:fixed;
-  top:12px;
-  left:12px;
-  background:#dc2626;
-  color:white;
-  padding:10px 14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 6px 12px rgba(0,0,0,0.2);
-  z-index:10;
+  font-family:"Segoe UI",sans-serif;
+  background:#f3f4f6;
 }
 
 /* ===== HEADER ===== */
-.top-header{
-  background:linear-gradient(135deg,#fee2e2,#fff7ed);
-  padding:35px 15px 25px;
-  text-align:center;
-  border-bottom-left-radius:30px;
-  border-bottom-right-radius:30px;
-  box-shadow:0 6px 12px rgba(0,0,0,0.1);
-}
-.top-header h1{
-  margin:0;
-  font-size:32px;
-  color:#991b1b;
-}
-.top-header p{
-  margin:8px 0 15px;
-  color:#7f1d1d;
-  font-size:16px;
-  font-weight:bold;
-}
-
-/* ===== CHỌN HỌC KÌ ===== */
-.semester-select{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-}
-.semester-btn{
-  padding:10px 18px;
-  border:none;
-  border-radius:14px;
-  background:#e5e7eb;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-}
-.semester-btn.active{
-  background:#dc2626;
+header{
+  background:linear-gradient(90deg,#2563eb,#0ea5e9);
   color:white;
-}
-
-/* ===== MAIN ===== */
-.main-content{
-  margin-top:20px;
-  background:white;
-  border-radius:30px;
-  padding:10px 0 30px;
-}
-
-/* ===== DANH SÁCH ===== */
-.container{
-  max-width:1200px;
-  margin:0 auto;
   padding:20px;
+  text-align:center;
+}
+header h1{margin:0;font-size:26px;}
+header p{margin:6px 0 0;font-size:15px;opacity:.9}
+
+/* ===== GRID ===== */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-/* ===== THẺ BÀI ===== */
+/* ===== CARD ===== */
 .card{
   position:relative;
-  border-radius:24px;
-  padding:36px 22px;
-  text-align:center;
-  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+  border-radius:16px;
+  padding:20px;
   cursor:pointer;
-  transition:transform 0.2s;
+  box-shadow:0 6px 14px rgba(0,0,0,.1);
+  transition:.25s;
 }
-.card:hover{transform:scale(1.05);}
-.card.locked{opacity:0.6;}
+.card:hover{transform:translateY(-4px);}
+.card h2{font-size:16px;margin:12px 0 0;line-height:1.4;}
+.icon{font-size:40px}
 
-/* ===== ICON ===== */
-.icon{
-  font-size:46px;
-  animation:bounce 1.2s infinite alternate;
+/* ===== SUBJECT ===== */
+.tin-hoc{
+  background:linear-gradient(135deg,#e0f2fe,#f0f9ff);
 }
-@keyframes bounce{
-  from{transform:translateY(0);}
-  to{transform:translateY(-8px);}
+.cong-nghe{
+  background:linear-gradient(135deg,#fff7ed,#ffedd5);
 }
+.subject-tag{
+  position:absolute;
+  top:12px;
+  left:14px;
+  padding:4px 10px;
+  font-size:12px;
+  font-weight:bold;
+  border-radius:999px;
+  color:white;
+}
+.subject-tin{background:#0284c7;}
+.subject-cn{background:#ea580c;}
 
-.card h2{
-  margin:15px 0 0;
-  font-size:19px;
-  color:#0f172a;
+/* ===== LOCK ===== */
+.locked{
+  filter:grayscale(1);
+  cursor:not-allowed;
 }
-
-/* ===== KHÓA ===== */
 .lock{
   position:absolute;
   top:12px;
   right:14px;
-  font-size:26px;
+  font-size:20px;
 }
 
-/* ===== MÀU ===== */
-.bai{background:#fee2e2;}
-.on-tap{background:#dcfce7;}
-.project{background:linear-gradient(135deg,#ecfeff,#cffafe);}
-
-/* ===== POPUP ===== */
-#popup{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:20;
-}
-.popup-box{
-  background:white;
-  padding:30px 25px;
-  border-radius:20px;
+/* ===== FOOTER ===== */
+footer{
   text-align:center;
-  max-width:340px;
-}
-.popup-box h3{color:#dc2626;}
-.popup-box button{
-  margin-top:20px;
-  padding:10px 18px;
-  border:none;
-  border-radius:12px;
-  background:#dc2626;
-  color:white;
-  font-size:16px;
+  font-size:13px;
+  color:#555;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<a class="home-btn" href="../index.html">🏠 Trang chủ</a>
-
-<header class="top-header">
-  <h1>💻 LỚP 5 – TIN HỌC</h1>
-  <p>Tư duy thuật toán – Kỹ năng số</p>
-
-  <div class="semester-select">
-    <button class="semester-btn active" onclick="showSemester(1)">📗 Học kì 1</button>
-    <button class="semester-btn" onclick="showSemester(2)">📕 Học kì 2</button>
-  </div>
+<header>
+  <h1>LỚP 5 – TIN HỌC & CÔNG NGHỆ</h1>
+  <p>Chọn bài học để bắt đầu 🚀</p>
 </header>
 
-<main class="main-content">
+<div class="container">
+<div class="grid">
 
-<!-- ===== HỌC KÌ 1 ===== -->
-<div class="container semester semester-1">
-
-    <div class="card on-tap locked"><div class="lock">🔒</div><div class="icon">🤖</div> <h2>Bài 1<br>Máy tính có thể giúp em làm những việc gì?</h2></div>
-  
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🔎</div><h2>Bài 2<br>Tìm kiếm thông tin trên website</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🧠</div><h2>Bài 3<br>Thông tin trong giải quyết vấn đề</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">📂</div><h2>Bài 4<br>Tổ chức lưu trữ và tìm kiếm tệp, thư mục trong máy tính</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">📊</div><h2>Bài 5<br>Bản quyền nội dung thông tin</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">📈</div><h2>Bài 6<br>Chỉnh sửa văn bản</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🧩</div><h2>Bài 7<br>Định dạng kí tự</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">⭐</div><h2>Bài 8A<br>Thực hành tạo thiệp chúc mừng </h2></div>
-
-  <div class="card bai" data-ready="true" data-link="scorm/OntapHK1(L5-2526)/index.html">
-    <div class="icon">📘</div>
-    <h2>Ôn tập<br>Học kì 1 - Tin học</h2>
-  </div>
-
-   <div class="card bai" data-ready="true" data-link="scorm/OntapHK1(CN-2526)/index.html">
-    <div class="icon">📘</div>
-    <h2>Ôn tập<br>Học kì 1 Công Nghệ</h2>
-  </div>
-
+<!-- ===== TIN HỌC ===== -->
+<div class="card tin-hoc locked">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="lock">🔒</div>
+  <div class="icon">🤖</div>
+  <h2>Bài 1<br>Máy tính có thể giúp em làm những việc gì?</h2>
 </div>
 
-<!-- ===== HỌC KÌ 2 ===== -->
-<div class="container semester semester-2" style="display:none">
+<div class="card tin-hoc locked">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="lock">🔒</div>
+  <div class="icon">💻</div>
+  <h2>Bài 2<br>Thông tin trên Internet</h2>
+</div>
 
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">➡️</div><h2>Bài 9<br>Cấu trúc tuần tự</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🔀</div><h2>Bài 10<br>Cấu trúc rẽ nhánh</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🔁</div><h2>Bài 11<br>Cấu trúc lặp</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🧮</div><h2>Bài 12<br>Viết chương trình tính toán</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">▶️</div><h2>Bài 13<br>Chạy thử chương trình</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">📝</div><h2>Bài 14<br>Viết kịch bản chương trình</h2></div>
-  <div class="card bai locked"><div class="lock">🔒</div><div class="icon">🚀</div><h2>Bài 15<br>Thực hành theo kịch bản</h2></div>
+<div class="card tin-hoc locked">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="lock">🔒</div>
+  <div class="icon">🖱️</div>
+  <h2>Bài 3<br>Thực hành sử dụng chuột và bàn phím</h2>
+</div>
 
-  <div class="card on-tap locked">
-    <div class="lock">🔒</div>
-    <div class="icon">📕</div>
-    <h2>Ôn tập<br>Học kì 2</h2>
-  </div>
+<div class="card tin-hoc locked">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="lock">🔒</div>
+  <div class="icon">📁</div>
+  <h2>Bài 4<br>Tổ chức thông tin trong máy tính</h2>
+</div>
+
+<div class="card tin-hoc locked">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="lock">🔒</div>
+  <div class="icon">🔐</div>
+  <h2>Bài 5<br>An toàn thông tin cá nhân</h2>
+</div>
+
+<!-- ===== ÔN TẬP TIN HỌC (CÓ SCORM) ===== -->
+<div class="card tin-hoc" data-link="scorm/OntapHK1_TinHoc/index.html">
+  <div class="subject-tag subject-tin">Tin học</div>
+  <div class="icon">📘</div>
+  <h2>Ôn tập<br>Học kì 1 – Tin học</h2>
+</div>
+
+<!-- ===== ÔN TẬP CÔNG NGHỆ ===== -->
+<div class="card cong-nghe" data-link="scorm/OntapHK1_CongNghe/index.html">
+  <div class="subject-tag subject-cn">Công nghệ</div>
+  <div class="icon">📙</div>
+  <h2>Ôn tập<br>Học kì 1 – Công nghệ</h2>
+</div>
 
 </div>
-</main>
-
-<div id="popup">
-  <div class="popup-box">
-    <h3>🔒 Chưa mở bài học</h3>
-    <p>Bài này thầy/cô đang chuẩn bị.<br>Con quay lại sau nhé 😊</p>
-    <button onclick="closePopup()">OK</button>
-  </div>
 </div>
+
+<footer>
+© 2025 – Trường Tiểu học Bình Khánh – Giáo viên Tin học
+</footer>
 
 <script>
-const clickSound = new Audio("sound/click.mp3");
-
 document.querySelectorAll(".card").forEach(card=>{
-  card.addEventListener("click",function(){
-    clickSound.currentTime=0;
-    clickSound.play();
-    if(this.dataset.ready==="true"){
-      setTimeout(()=>window.location.href=this.dataset.link,150);
-    }else{
-      setTimeout(()=>document.getElementById("popup").style.display="flex",150);
-    }
-  });
+  if(card.dataset.link){
+    card.addEventListener("click",()=>{
+      window.location.href = card.dataset.link;
+    });
+  }
 });
-
-function closePopup(){
-  document.getElementById("popup").style.display="none";
-}
-
-function showSemester(s){
-  document.querySelectorAll(".semester").forEach(e=>e.style.display="none");
-  document.querySelector(".semester-"+s).style.display="grid";
-  document.querySelectorAll(".semester-btn").forEach(b=>b.classList.remove("active"));
-  document.querySelectorAll(".semester-btn")[s-1].classList.add("active");
-}
 </script>
 
 </body>
